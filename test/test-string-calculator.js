@@ -1,7 +1,7 @@
 
 
 const chai = require('chai');
-const emptyStr = require('./test.js');
+const checkString = require('./test.js');
 
 const { expect } = chai;
 
@@ -17,11 +17,19 @@ function itAlwaysBe2() {
 
 
 function emptyString() {
-  expect(emptyStr('')).to.be.equal(0);
+  expect(checkString('')).to.be.equal(0);
 }
 
 function numString() {
-  expect(emptyStr('10')).to.be.equal(10);
+  expect(checkString('10')).to.be.equal(10);
+}
+
+function sumString() {
+  expect(checkString('2,3')).to.be.equal(5);
+}
+
+function sumNewline() {
+  expect(checkString('2\n3')).to.be.equal(5);
 }
 
 
@@ -31,6 +39,8 @@ function exampleBehaviors() {
   it('should be equal 2', itAlwaysBe2);
   it('should be 0', emptyString);
   it('should be 10', numString);
+  it('should be 5', sumString);
+  it('should be 5', sumNewline);
 }
 
 // Start Describe
