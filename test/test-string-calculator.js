@@ -20,12 +20,17 @@ function emptyString() {
   expect(emptyStr('')).to.be.equal(0);
 }
 
+function numString() {
+  expect(emptyStr('10')).to.be.equal(10);
+}
+
 
 // Start Example Behaviors
 function exampleBehaviors() {
   it('should be true', itAlwaysTrue);
   it('should be equal 2', itAlwaysBe2);
   it('should be 0', emptyString);
+  it('should be 10', numString);
 }
 
 // Start Describe
