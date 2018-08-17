@@ -32,6 +32,9 @@ function sumNewline() {
   expect(checkString('2\n3')).to.be.equal(5);
 }
 
+function sum3Num() {
+  expect(checkString('1,2\n3')).to.be.equal(6);
+}
 
 // Start Example Behaviors
 function exampleBehaviors() {
@@ -41,6 +44,7 @@ function exampleBehaviors() {
   it('should be 10', numString);
   it('should be 5', sumString);
   it('should be 5', sumNewline);
+  it('should be 6', sum3Num);
 }
 
 // Start Describe
