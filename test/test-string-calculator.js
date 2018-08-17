@@ -36,6 +36,19 @@ function sum3Num() {
   expect(checkString('1,2\n3')).to.be.equal(6);
 }
 
+function callNagative() {
+  return checkString('-2,1,3');
+}
+
+function nagative() {
+  expect(callNagative).to.throw(Error);
+  // expect(checkString('1,2,-5')).to.not.throw();
+}
+
+function IgnoredNumber() {
+  expect(checkString('1,2,3000')).to.equal(3);
+}
+
 // Start Example Behaviors
 function exampleBehaviors() {
   it('should be true', itAlwaysTrue);
@@ -45,6 +58,8 @@ function exampleBehaviors() {
   it('should be 5', sumString);
   it('should be 5', sumNewline);
   it('should be 6', sum3Num);
+  it('Nagative', nagative);
+  it('Ignored Number >1000', IgnoredNumber);
 }
 
 // Start Describe
