@@ -49,6 +49,10 @@ function IgnoredNumber() {
   expect(checkString('1,2,3000')).to.equal(3);
 }
 
+function separator() {
+  expect(checkString('//-1-2-3')).to.equal(6);
+}
+
 // Start Example Behaviors
 function exampleBehaviors() {
   it('should be true', itAlwaysTrue);
@@ -60,6 +64,7 @@ function exampleBehaviors() {
   it('should be 6', sum3Num);
   it('Nagative', nagative);
   it('Ignored Number >1000', IgnoredNumber);
+  it('should be 6', separator);
 }
 
 // Start Describe

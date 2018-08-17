@@ -2,6 +2,8 @@
 function emptyString(a) {
   if (a === '') {
     return 0;
+  } else if (a[0] === '/' && a[1] === '/') {
+    return a.split(a[3]).map(Number).reduce((x, y) => x + y, 0);
   } else if (a.includes(',') || a.includes('\n')) {
     a.split(/[\s,]+/).forEach((element) => {
       if (parseInt(element, 10) < 0) {
