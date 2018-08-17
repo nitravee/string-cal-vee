@@ -3,7 +3,12 @@ function emptyString(a) {
   if (a === '') {
     return 0;
   } else if (a[0] === '/' && a[1] === '/') {
-    return a.split(a[3]).map(Number).reduce((x, y) => x + y, 0);
+    // console.log(a[2]);
+    // a.pop();
+    // a.pop();
+    const separator = a[2];
+    console.log(a.slice(3));
+    return a.slice(3).split(separator).map(Number).reduce((x, y) => x + y, 0);
   } else if (a.includes(',') || a.includes('\n')) {
     a.split(/[\s,]+/).forEach((element) => {
       if (parseInt(element, 10) < 0) {

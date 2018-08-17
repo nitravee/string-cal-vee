@@ -50,7 +50,7 @@ function IgnoredNumber() {
 }
 
 function separator() {
-  expect(checkString('//-1-2-3')).to.equal(6);
+  expect(checkString('//a1a2a3')).to.equal(6);
 }
 
 // Start Example Behaviors
